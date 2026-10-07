@@ -1,0 +1,173 @@
+---
+layout: default
+title: 胡晓倩 | 学术主页
+description: 胡晓倩，首都经济贸易大学管理工程学院副教授、硕士生导师。
+---
+{% assign profile = site.data.profile %}
+
+<header class="site-header" id="top">
+  <div class="nav-shell">
+    <a class="wordmark" href="#top" aria-label="返回首页">
+      <span class="wordmark-mark">HXQ</span>
+      <span>{{ profile.name }}</span>
+    </a>
+    <nav class="desktop-nav" aria-label="主导航">
+      <a href="#about">简介</a>
+      <a href="#experience">经历</a>
+      <a href="#research">研究</a>
+      <a href="#publications">成果</a>
+      <a href="#contact">联系</a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="切换深色模式" title="切换深色模式">
+      <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path></svg>
+      <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero shell" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="eyebrow">ACADEMIC PROFILE · 学术主页</p>
+      <h1 id="hero-title">{{ profile.name }}{% if profile.name_en != "" %}<span>{{ profile.name_en }}</span>{% endif %}</h1>
+      <p class="role">{{ profile.title }}</p>
+      <p class="affiliation">{{ profile.university }} · {{ profile.school }} · {{ profile.department }}</p>
+      <p class="lead">{{ profile.tagline }}</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="mailto:{{ profile.email }}">邮件联系</a>
+        <a class="button button-secondary" href="#publications">查看研究成果</a>
+      </div>
+      <div class="social-links" aria-label="学术链接">
+        {% for link in profile.links %}
+          {% if link.url != "" %}<a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }} ↗</a>{% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    <figure class="portrait-wrap">
+      <span class="portrait-offset" aria-hidden="true"></span>
+      <img class="portrait" src="{{ profile.portrait | relative_url }}" alt="{{ profile.name }}的照片" width="816" height="1225">
+      <figcaption>{{ profile.location }}</figcaption>
+    </figure>
+  </section>
+
+  <section class="section shell about-grid" id="about" aria-labelledby="about-title">
+    <div>
+      <p class="section-kicker">01 / ABOUT</p>
+      <h2 id="about-title">个人简介</h2>
+    </div>
+    <div class="about-copy">
+      <p>{{ profile.bio }}</p>
+      <div class="interest-list" aria-label="研究方向">
+        {% for interest in profile.research_interests %}<span>{{ interest }}</span>{% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tinted" id="experience" aria-labelledby="experience-title">
+    <div class="shell">
+      <p class="section-kicker">02 / BACKGROUND</p>
+      <h2 id="experience-title">教育与工作经历</h2>
+      <div class="two-column">
+        <article>
+          <h3>教育经历</h3>
+          <ol class="timeline">
+            {% for item in profile.education %}
+              <li><time>{{ item.period }}</time><div><strong>{{ item.institution }}</strong><span>{{ item.detail }}</span></div></li>
+            {% endfor %}
+          </ol>
+        </article>
+        <article>
+          <h3>工作经历</h3>
+          <ol class="timeline">
+            {% for item in profile.experience %}
+              <li><time>{{ item.period }}</time><div><strong>{{ item.institution }}</strong><span>{{ item.detail }}</span></div></li>
+            {% endfor %}
+          </ol>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section shell" id="research" aria-labelledby="research-title">
+    <p class="section-kicker">03 / RESEARCH & TEACHING</p>
+    <h2 id="research-title">研究与教学</h2>
+    <div class="research-layout">
+      <div class="projects">
+        <h3>代表性项目</h3>
+        {% for project in profile.projects %}
+          <article class="project-card">
+            <div class="project-meta"><span>{{ project.funder }}</span><span class="status {% if project.status == '在研' %}active{% endif %}">{{ project.status }}</span></div>
+            <h4>{{ project.title }}</h4>
+            <p>项目编号 {{ project.number }} · {{ project.period }} · {{ project.role }}</p>
+          </article>
+        {% endfor %}
+      </div>
+      <aside class="teaching-card">
+        <p class="mini-label">TEACHING</p>
+        <h3>主要讲授课程</h3>
+        <ul>
+          {% for course in profile.courses %}<li>{{ course }}</li>{% endfor %}
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section publications-section" id="publications" aria-labelledby="publications-title">
+    <div class="shell">
+      <div class="section-heading-row">
+        <div>
+          <p class="section-kicker">04 / SELECTED WORK</p>
+          <h2 id="publications-title">代表性论文</h2>
+        </div>
+        <p class="publication-note">* 表示通讯作者</p>
+      </div>
+      <ol class="publication-list">
+        {% for paper in profile.publications %}
+          <li class="publication">
+            <time>{{ paper.year }}</time>
+            <div>
+              <p class="authors">{{ paper.authors }}</p>
+              <h3>{% if paper.doi != "" %}<a href="{{ paper.doi }}">{{ paper.title }}</a>{% else %}{{ paper.title }}{% endif %}</h3>
+              <p class="venue">{{ paper.venue }}</p>
+              {% if paper.note != "" %}<span class="paper-tag">{{ paper.note }}</span>{% endif %}
+            </div>
+          </li>
+        {% endfor %}
+      </ol>
+    </div>
+  </section>
+
+  <section class="section shell" id="honors" aria-labelledby="honors-title">
+    <p class="section-kicker">05 / HONORS</p>
+    <h2 id="honors-title">荣誉与指导成果</h2>
+    <div class="honors-grid">
+      {% for award in profile.awards %}
+        <article><span>{{ award.year | default: '荣誉' }}</span><p>{{ award.title }}</p></article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact" aria-labelledby="contact-title">
+    <div class="shell contact-inner">
+      <div>
+        <p class="section-kicker">06 / CONTACT</p>
+        <h2 id="contact-title">欢迎交流与合作</h2>
+        <p>{{ profile.student_message }}</p>
+      </div>
+      <div class="contact-card">
+        <span>EMAIL</span>
+        <a href="mailto:{{ profile.email }}">{{ profile.email }}</a>
+        {% if profile.office != "" %}<p>{{ profile.office }}</p>{% endif %}
+        {% if profile.phone != "" %}<p>{{ profile.phone }}</p>{% endif %}
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="shell footer-inner">
+    <p>© <span id="current-year"></span> {{ profile.name }} · {{ profile.university }}</p>
+    <p>内容来源：<a href="{{ profile.source.url }}" target="_blank" rel="noopener noreferrer">{{ profile.source.label }}</a></p>
+    <a href="#top">返回顶部 ↑</a>
+  </div>
+</footer>

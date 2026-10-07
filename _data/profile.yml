@@ -1,0 +1,150 @@
+# 个人主页的主要内容都集中在这里，后续可直接修改此文件。
+# 尚未获得的信息保留为空字符串；页面会自动隐藏空字段。
+
+name: 胡晓倩
+name_en: ""
+title: 副教授 · 硕士生导师
+department: 数据科学与大数据技术系
+school: 管理工程学院
+university: 首都经济贸易大学
+location: 北京，中国
+email: huxiaoqian@cueb.edu.cn
+phone: ""
+office: ""
+portrait: /assets/images/profile.jpeg
+
+tagline: 在不确定性中寻找确定性，用数据智能重塑复杂系统的生存法则。
+bio: >-
+  主要从事供应链网络与贸易网络风险管理、经济系统复杂性研究。
+  主持国家自然科学基金面上项目、青年科学基金项目及企业合作项目等多项课题，
+  并作为主要成员参与多项研究。以第一作者或第一通讯作者发表学术论文20余篇。
+
+research_interests:
+  - 供应链网络与贸易网络风险管理
+  - 经济系统复杂性
+
+links:
+  - label: 学院主页
+    icon: building
+    url: https://ggxy.cueb.edu.cn/szdw/sjkxydsjjsx/d7d3beefba4d4197ba33b442a3eef915.htm
+  - label: Google Scholar
+    icon: scholar
+    url: ""
+  - label: ORCID
+    icon: orcid
+    url: ""
+  - label: GitHub
+    icon: github
+    url: ""
+  - label: 个人简历
+    icon: file
+    url: ""
+
+education:
+  - period: 2014–2020
+    institution: 北京航空航天大学
+    detail: 管理学博士
+  - period: 2018–2019
+    institution: 美国波士顿大学
+    detail: 联合培养博士
+  - period: 2010–2014
+    institution: 西南财经大学
+    detail: 管理学学士
+
+experience:
+  - period: 2022.01–至今
+    institution: 首都经济贸易大学管理工程学院
+    detail: 副教授
+  - period: 2020.07–2021.12
+    institution: 首都经济贸易大学管理工程学院
+    detail: 讲师
+
+courses:
+  - 数据结构
+  - 分布式计算
+  - 数据科学的计算机基础
+
+projects:
+  - title: 新能源关键矿产供应链网络的风险叠加影响机理及韧性提升策略
+    funder: 国家自然科学基金委员会面上项目
+    number: "72574149"
+    period: 2026.01–2029.12
+    role: 主持
+    status: 在研
+  - title: 双循环格局下RCEP对中国贸易影响的演化机理研究
+    funder: 国家自然科学基金委员会青年科学基金项目
+    number: "72101164"
+    period: 2022.01–2024.12
+    role: 主持
+    status: 结项
+
+publications:
+  - year: 2025
+    authors: "Wang C, Zhang X, Hu X*, et al."
+    title: "Dynamics and drivers of global secondhand clothing trade: Implications for sustainable energy and circular economy in fashion"
+    venue: "Renewable and Sustainable Energy Reviews, 209: 115116"
+    note: "SCI Q1，工程技术1区 Top，通讯作者"
+    doi: ""
+  - year: 2025
+    authors: "Wang C, Zhang L, Hu X*, et al."
+    title: "Assessing the dynamics of supply risks in the global polysilicon trade network: A multidimensional analysis from 2000 to 2022"
+    venue: "Structural Change and Economic Dynamics, 74: 991–1007"
+    note: "SSCI Q1，通讯作者"
+    doi: ""
+  - year: 2024
+    authors: "Wang C, Zhang X, Hu X*, et al."
+    title: "Evolution of structural characteristics and its determinants of global human hair waste trade network based on temporal exponential random graph model"
+    venue: "Resources, Conservation and Recycling, 200: 107305"
+    note: "SCI Q1，环境科学与生态学1区 Top，通讯作者"
+    doi: ""
+  - year: 2023
+    authors: "Hu X, Wang C, Lim M K, et al."
+    title: "Critical systemic risk sources in global lithium-ion battery supply networks: Static and dynamic network perspectives"
+    venue: "Renewable and Sustainable Energy Reviews, 173: 113083"
+    note: "SCI Q1，工程技术1区 Top，第一作者"
+    doi: ""
+  - year: 2021
+    authors: "Hu X, Wang C, Zhu X, et al."
+    title: "Trade structure and risk transmission in the international automotive Li-ion batteries trade"
+    venue: "Resources, Conservation and Recycling, 170: 105591"
+    note: "SCI Q1，环境科学与生态学1区 Top，第一作者"
+    doi: ""
+  - year: 2020
+    authors: "Hu X, Wang C, Wu J, et al."
+    title: "Understanding interurban networks from a multiplexity perspective"
+    venue: "Cities, 99: 102625"
+    note: "SSCI Q1，经济学1区 Top，第一作者"
+    doi: ""
+  - year: 2020
+    authors: "Hu X, Wang C, Lim M K, et al."
+    title: "Characteristics of the global copper raw materials and scrap trade systems and the policy impacts of China's import ban"
+    venue: "Ecological Economics, 172: 106626"
+    note: "SCI Q1，FMS 管理科学A类，经济学二区 Top，第一作者"
+    doi: ""
+
+awards:
+  - year: 2020
+    title: icRS Urbanisation 最佳会议论文
+  - year: ""
+    title: 首都经济贸易大学中青年骨干教师
+  - year: ""
+    title: 指导学生获北京市优秀本科毕业论文
+  - year: 2022
+    title: 指导学生获“青创北京”挑战杯首都大学生创业计划竞赛“青力冬奥”专项赛铜奖
+
+student_message: 提供良好的科研环境，欢迎同学报考咨询！
+
+# 预留内容：填写后可在页面中新增相应板块或链接。
+optional:
+  biography_en: ""
+  research_statement: ""
+  academic_service: []
+  students: []
+  news: []
+  talks: []
+  datasets: []
+
+source:
+  label: 首都经济贸易大学管理工程学院教师主页
+  url: https://ggxy.cueb.edu.cn/szdw/sjkxydsjjsx/d7d3beefba4d4197ba33b442a3eef915.htm
+  accessed: 2026-10-07
