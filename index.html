@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 胡晓倩 | 学术主页
-description: 胡晓倩，首都经济贸易大学管理工程学院副教授、硕士生导师。
+description: 胡晓倩，首都经济贸易大学管理工程学院副教授、博士生导师、硕士生导师。
 ---
 {% assign profile = site.data.profile %}
 
@@ -16,6 +16,7 @@ description: 胡晓倩，首都经济贸易大学管理工程学院副教授、�
       <a href="#experience">经历</a>
       <a href="#research">研究</a>
       <a href="#publications">成果</a>
+      <a href="#recruitment">招生</a>
       <a href="#contact">联系</a>
     </nav>
     <button class="theme-toggle" type="button" aria-label="切换深色模式" title="切换深色模式">
@@ -34,8 +35,8 @@ description: 胡晓倩，首都经济贸易大学管理工程学院副教授、�
       <p class="affiliation">{{ profile.university }} · {{ profile.school }} · {{ profile.department }}</p>
       <p class="lead">{{ profile.tagline }}</p>
       <div class="hero-actions">
-        <a class="button button-primary" href="mailto:{{ profile.email }}">邮件联系</a>
-        <a class="button button-secondary" href="#publications">查看研究成果</a>
+        <a class="button button-primary" href="#recruitment">了解招生信息</a>
+        <a class="button button-secondary" href="#publications">查看代表性成果</a>
       </div>
       <div class="social-links" aria-label="学术链接">
         {% for link in profile.links %}
@@ -49,6 +50,12 @@ description: 胡晓倩，首都经济贸易大学管理工程学院副教授、�
       <figcaption>{{ profile.location }}</figcaption>
     </figure>
   </section>
+
+  <div class="profile-strip shell" aria-label="学术主页摘要">
+    <div><span>研究聚焦</span><strong>复杂网络与供应链韧性</strong></div>
+    <div><span>招生类别</span><strong>博士 · 学硕 · 专硕</strong></div>
+    <div><span>合作方式</span><strong>数据 · 模型 · 计算实验</strong></div>
+  </div>
 
   <section class="section shell about-grid" id="about" aria-labelledby="about-title">
     <div>
@@ -105,9 +112,14 @@ description: 胡晓倩，首都经济贸易大学管理工程学院副教授、�
       <aside class="teaching-card">
         <p class="mini-label">TEACHING</p>
         <h3>主要讲授课程</h3>
-        <ul>
-          {% for course in profile.courses %}<li>{{ course }}</li>{% endfor %}
-        </ul>
+        {% for group in profile.course_groups %}
+          <div class="course-group">
+            <h4>{{ group.level }}</h4>
+            <ul>
+              {% for course in group.courses %}<li>{{ course }}</li>{% endfor %}
+            </ul>
+          </div>
+        {% endfor %}
       </aside>
     </div>
   </section>
@@ -119,7 +131,7 @@ description: 胡晓倩，首都经济贸易大学管理工程学院副教授、�
           <p class="section-kicker">04 / SELECTED WORK</p>
           <h2 id="publications-title">代表性论文</h2>
         </div>
-        <p class="publication-note">* 表示通讯作者</p>
+        <p class="publication-note">仅展示部分代表性成果 · * 表示通讯作者</p>
       </div>
       <ol class="publication-list">
         {% for paper in profile.publications %}
@@ -147,10 +159,63 @@ description: 胡晓倩，首都经济贸易大学管理工程学院副教授、�
     </div>
   </section>
 
+  <section class="section recruitment-section" id="recruitment" aria-labelledby="recruitment-title">
+    <div class="shell">
+      <div class="recruitment-heading">
+        <div>
+          <p class="section-kicker">06 / JOIN THE GROUP</p>
+          <h2 id="recruitment-title">招生与研究机会</h2>
+        </div>
+        <p>{{ profile.recruitment.headline }}</p>
+      </div>
+      <p class="recruitment-intro">{{ profile.recruitment.intro }}</p>
+
+      <div class="program-grid">
+        {% for program in profile.recruitment.programs %}
+          <article>
+            <span>0{{ forloop.index }}</span>
+            <p>{{ program.type }}</p>
+            <h3>{{ program.degree }}</h3>
+            <small>{{ program.focus }}</small>
+          </article>
+        {% endfor %}
+      </div>
+
+      <div class="recruitment-details">
+        <div>
+          <p class="mini-label">RESEARCH SUPPORT</p>
+          <h3>你将获得的研究支持</h3>
+          <div class="support-list">
+            {% for item in profile.recruitment.support %}
+              <article><span>{{ item.title }}</span><p>{{ item.text }}</p></article>
+            {% endfor %}
+          </div>
+        </div>
+        <div>
+          <p class="mini-label">WHAT WE VALUE</p>
+          <h3>期待这样的你</h3>
+          <ul class="expectation-list">
+            {% for item in profile.recruitment.expectations %}<li>{{ item }}</li>{% endfor %}
+          </ul>
+        </div>
+      </div>
+
+      <div class="topic-row" aria-label="拟招收研究方向">
+        <span>拟招收研究方向</span>
+        <div>{% for topic in profile.recruitment.topics %}<p>{{ topic }}</p>{% endfor %}</div>
+      </div>
+
+      <div class="apply-row">
+        <p>{{ profile.recruitment.application }}</p>
+        <a class="button button-light" href="mailto:{{ profile.email }}?subject=研究生招生咨询">邮件联系</a>
+      </div>
+    </div>
+  </section>
+
   <section class="contact-section" id="contact" aria-labelledby="contact-title">
     <div class="shell contact-inner">
       <div>
-        <p class="section-kicker">06 / CONTACT</p>
+        <p class="section-kicker">07 / CONTACT</p>
         <h2 id="contact-title">欢迎交流与合作</h2>
         <p>{{ profile.student_message }}</p>
       </div>
