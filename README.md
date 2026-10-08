@@ -36,11 +36,6 @@ bundle exec jekyll serve
 
 也可以直接推送到 GitHub，使用仓库自带的 Pages 工作流构建。
 
-## 内容来源
-
-- [胡晓倩｜首都经济贸易大学管理工程学院](https://ggxy.cueb.edu.cn/szdw/sjkxydsjjsx/d7d3beefba4d4197ba33b442a3eef915.htm)
-- 页面结构与学术网站思路参考 [al-folio](https://github.com/alshedivat/al-folio)
-
 ## License
 
 站点代码采用 MIT License。个人照片与履历信息不在代码许可范围内。
