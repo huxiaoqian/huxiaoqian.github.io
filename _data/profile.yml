@@ -168,12 +168,15 @@ recruitment:
     - type: 博士研究生
       degree: 管理科学与工程（学术博士）
       focus: 管理科学理论、方法和技术方向
+      status: 招生中
     - type: 硕士研究生
       degree: 管理科学与工程（学术硕士）
       focus: 复杂网络、供应链韧性与风险管理
+      status: 招生中
     - type: 专业硕士
       degree: 电子信息
-      focus: 数据智能、计算方法与管理应用
+      focus: 当前暂停招收专业硕士研究生
+      status: 暂停招生
   topics:
     - 新能源关键矿产与供应链网络韧性
     - 贸易网络风险传播与系统复杂性
