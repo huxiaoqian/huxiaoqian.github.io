@@ -172,7 +172,7 @@ description: 胡晓倩，首都经济贸易大学管理工程学院副教授、�
 
       <div class="program-grid">
         {% for program in profile.recruitment.programs %}
-          <article{% if program.status == '暂停招生' %} class="program-paused"{% endif %}>
+          <article>
             <div class="program-card-top"><span>0{{ forloop.index }}</span><em>{{ program.status }}</em></div>
             <p>{{ program.type }}</p>
             <h3>{{ program.degree }}</h3>

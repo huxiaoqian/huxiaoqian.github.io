@@ -155,13 +155,11 @@ html[data-theme="light"] .moon, html[data-theme="dark"] .sun { display: none; }
 .recruitment-heading { display: grid; grid-template-columns: 1.25fr .75fr; gap: 60px; align-items: end; }
 .recruitment-heading > p { margin: 0 0 7px; font-family: var(--serif); font-size: clamp(20px, 2.6vw, 29px); line-height: 1.55; }
 .recruitment-intro { max-width: 820px; margin: 50px 0 0; color: color-mix(in srgb, var(--recruit-ink) 76%, transparent); font-size: 17px; }
-.program-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 56px; background: color-mix(in srgb, var(--recruit-ink) 24%, transparent); border: 1px solid color-mix(in srgb, var(--recruit-ink) 24%, transparent); }
+.program-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; margin-top: 56px; background: color-mix(in srgb, var(--recruit-ink) 24%, transparent); border: 1px solid color-mix(in srgb, var(--recruit-ink) 24%, transparent); }
 .program-grid article { min-height: 230px; padding: 28px; background: var(--recruit-bg); }
 .program-card-top { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
 .program-card-top > span { color: #9cdec9; font-size: 11px; letter-spacing: .16em; }
 .program-card-top > em { padding: 3px 9px; border: 1px solid color-mix(in srgb, #9cdec9 62%, transparent); border-radius: 999px; color: #9cdec9; font-size: 10px; font-style: normal; letter-spacing: .08em; }
-.program-paused { opacity: .62; }
-.program-paused .program-card-top > em { border-color: color-mix(in srgb, var(--recruit-ink) 48%, transparent); color: color-mix(in srgb, var(--recruit-ink) 72%, transparent); }
 .program-grid article > p { margin: 35px 0 8px; color: color-mix(in srgb, var(--recruit-ink) 66%, transparent); font-size: 12px; }
 .program-grid h3 { margin: 0 0 20px; font-family: var(--serif); font-size: 23px; line-height: 1.45; }
 .program-grid small { display: block; color: color-mix(in srgb, var(--recruit-ink) 72%, transparent); font-size: 13px; line-height: 1.65; }
