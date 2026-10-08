@@ -92,6 +92,12 @@ projects:
     period: 2022.01–2024.12
     role: 主持
     status: 结项
+  - title: 用户行为分析及其与经济系统的耦合性研究
+    funder: 首都经济贸易大学新入职青年教师科研启动基金项目
+    number: "XRZ2021067"
+    period: 2021.01–2022.12
+    role: 主持
+    status: 结项
 
 publications:
   - year: 2026
@@ -106,11 +112,23 @@ publications:
     venue: "Annals of Operations Research"
     note: "第一作者 · SCI JCR Q1 · ABS 3星 · FMS B级"
     doi: https://doi.org/10.1007/s10479-026-07070-8
+  - year: 2026
+    authors: "Chao Wang, Jiyun Dong, Xiaoqian Hu*, Gang Liu"
+    title: "Unraveling the dynamics and drivers of the global wind turbine trade network"
+    venue: "Economic Analysis and Policy, 91: 1578–1597"
+    note: "通讯作者 · SCI JCR Q1"
+    doi: ""
   - year: 2025
     authors: "Chao Wang, Xuemei Zhang, Xiaoqian Hu*, et al."
     title: "Dynamics and drivers of global secondhand clothing trade: Implications for sustainable energy and circular economy in fashion"
     venue: "Renewable and Sustainable Energy Reviews, 209: 115116"
     note: "通讯作者 · SCI JCR Q1 · 能源类 Top 期刊"
+    doi: ""
+  - year: 2024
+    authors: "Chao Wang, Xuemei Zhang, Xiaoqian Hu*, et al."
+    title: "Evolution of structural characteristics and its determinants of global human hair waste trade network based on temporal exponential random graph model"
+    venue: "Resources, Conservation and Recycling, 200: 107305"
+    note: "通讯作者 · SCI JCR Q1"
     doi: ""
   - year: 2023
     authors: "Xiaoqian Hu, Chao Wang*, Ming K. Lim, et al."
@@ -123,6 +141,12 @@ publications:
     title: "Trade structure and risk transmission in the international automotive Li-ion batteries trade"
     venue: "Resources, Conservation and Recycling, 170: 105591"
     note: "第一作者 · SCI JCR Q1"
+    doi: ""
+  - year: 2020
+    authors: "Xiaoqian Hu, Chao Wang*, Junjie Wu*, H. Eugene Stanley"
+    title: "Understanding interurban networks from a multiplexity perspective"
+    venue: "Cities, 99: 102625"
+    note: "第一作者 · SSCI JCR Q1 · 城市研究 Top 期刊"
     doi: ""
 
 awards:
