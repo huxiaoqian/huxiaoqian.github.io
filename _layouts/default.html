@@ -12,7 +12,8 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="{{ site.data.profile.portrait | relative_url }}">
     <link rel="icon" href="{{ '/assets/images/favicon.svg' | relative_url }}" type="image/svg+xml">
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    {% assign asset_version = site.github.build_revision | default: site.time %}
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ asset_version | uri_escape }}">
     <script>
       (function () {
         const saved = localStorage.getItem('theme');
